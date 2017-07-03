@@ -11,4 +11,5 @@ target 'UserProfileTest' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
+  pod 'Google/Analytics'
 end

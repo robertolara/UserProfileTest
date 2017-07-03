@@ -52,6 +52,7 @@ class ViewController: UIViewController {
                 print(error!)
                 return
             }
+            print("signed in")
             self.dismiss(animated: true, completion: nil)
         })
     
@@ -81,7 +82,7 @@ class ViewController: UIViewController {
             }
             
             let userReference = self.databaseRef.child("users").child(uid)
-            let values = ["username": username, "email": email, "pic":""]
+            let values = ["username": username, "email": email, "pic": ""]
             
             userReference.updateChildValues(values
                 , withCompletionBlock: { (error, ref) in
@@ -92,6 +93,7 @@ class ViewController: UIViewController {
                     self.dismiss(animated: true, completion: nil)
             })
         })
+        
     }
     
     override func didReceiveMemoryWarning() {
